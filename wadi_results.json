@@ -1,0 +1,50 @@
+{
+  "Static-AE": {
+    "roc_auc": 0.7167,
+    "pr_auc": 0.3282,
+    "best_f1": 0.4096,
+    "best_f1_precision": 0.3922,
+    "best_f1_recall": 0.4286,
+    "separation": 1.931
+  },
+  "MLP-AE": {
+    "roc_auc": 0.676,
+    "pr_auc": 0.3833,
+    "best_f1": 0.4274,
+    "best_f1_precision": 0.4907,
+    "best_f1_recall": 0.3786,
+    "separation": 1.531
+  },
+  "Isolation-Forest": {
+    "roc_auc": 0.7305,
+    "pr_auc": 0.2975,
+    "best_f1": 0.376,
+    "best_f1_precision": 0.3793,
+    "best_f1_recall": 0.3886,
+    "separation": 1.1046
+  },
+  "MAML-AE (20-shot)": {
+    "roc_auc": 0.7156,
+    "pr_auc": 0.3282,
+    "best_f1": 0.3929,
+    "best_f1_precision": 0.41,
+    "best_f1_recall": 0.3772,
+    "separation": 1.5992
+  },
+  "MAML-AE (50-shot)": {
+    "roc_auc": 0.7144,
+    "pr_auc": 0.3293,
+    "best_f1": 0.3941,
+    "best_f1_precision": 0.411,
+    "best_f1_recall": 0.3786,
+    "separation": 1.5952
+  },
+  "MAML-AE (100-shot)": {
+    "roc_auc": 0.7148,
+    "pr_auc": 0.3286,
+    "best_f1": 0.3964,
+    "best_f1_precision": 0.4196,
+    "best_f1_recall": 0.3757,
+    "separation": 1.5968
+  }
+}
