@@ -1,0 +1,118 @@
+{
+  "env": {
+    "torch": "2.12.1+cpu",
+    "python": "3.10.20",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "cuda_available": false,
+    "gpu": null
+  },
+  "static": {
+    "lstm_ae": {
+      "params": 69481,
+      "fp32_bytes": 284981,
+      "macs_per_window": 2022272,
+      "flops_per_window": 4044544
+    },
+    "mlp_ae": {
+      "params": 420222,
+      "fp32_bytes": 1685749,
+      "macs_per_window": 418816,
+      "flops_per_window": 837632
+    }
+  },
+  "latency": {
+    "cpu_1thread": {
+      "batch1": {
+        "mean_ms": 2.7207020053174347,
+        "std_ms": 0.611522643054907,
+        "median_ms": 2.7835000364575535,
+        "throughput_win_per_s": 367.55219720703155
+      },
+      "batch32": {
+        "mean_ms": 9.555422997800633,
+        "std_ms": 1.2871454025361129,
+        "median_ms": 9.219950006809086,
+        "throughput_win_per_s": 3348.883666098866
+      },
+      "batch128": {
+        "mean_ms": 31.432195996167138,
+        "std_ms": 2.78714296916326,
+        "median_ms": 30.74919999926351,
+        "throughput_win_per_s": 4072.257630857494
+      }
+    },
+    "cpu_all": {
+      "batch1": {
+        "mean_ms": 3.066473999642767,
+        "std_ms": 0.5205903287874841,
+        "median_ms": 3.099749970715493,
+        "throughput_win_per_s": 326.1074446143996
+      },
+      "batch32": {
+        "mean_ms": 5.451984000974335,
+        "std_ms": 1.28284943600874,
+        "median_ms": 4.9898500146809965,
+        "throughput_win_per_s": 5869.422946633962
+      },
+      "batch128": {
+        "mean_ms": 8.270267002517357,
+        "std_ms": 1.4458859401620483,
+        "median_ms": 7.851650007069111,
+        "throughput_win_per_s": 15477.130298337228
+      }
+    }
+  },
+  "memory": {
+    "cpu_1thread": {
+      "infer_peak_mb": 19.116032,
+      "adapt_K5_peak_mb": 0.598016
+    },
+    "cpu_all": {
+      "infer_peak_mb": 11.460608,
+      "adapt_K5_peak_mb": 0.069632
+    }
+  },
+  "adaptation": {
+    "cpu_1thread": {
+      "K1": {
+        "mean_ms": 9.161314996890724,
+        "std_ms": 1.9557710948678917
+      },
+      "K5": {
+        "mean_ms": 46.960164996562526,
+        "std_ms": 2.9079847891341957
+      },
+      "K10": {
+        "mean_ms": 129.85130999877583,
+        "std_ms": 4.554584922681857
+      }
+    },
+    "cpu_all": {
+      "K1": {
+        "mean_ms": 11.987659989972599,
+        "std_ms": 0.9643211143564857
+      },
+      "K5": {
+        "mean_ms": 63.15002500487026,
+        "std_ms": 6.140842038134138
+      },
+      "K10": {
+        "mean_ms": 151.1799149971921,
+        "std_ms": 7.932335457653529
+      }
+    }
+  },
+  "quantization": {
+    "int8_bytes": 84405,
+    "fp32_bytes": 284981,
+    "size_reduction_x": 3.3763521118417157,
+    "recon_err_mean_abs_diff": 2.1639280021190643e-05,
+    "recon_err_pearson_r": 0.9999998856717729,
+    "int8_latency_b1": {
+      "mean_ms": 41.44676000229083,
+      "std_ms": 1.8277209090972308,
+      "median_ms": 40.906400012318045
+    }
+  }
+}
